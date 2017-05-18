@@ -10,6 +10,7 @@
 	<version>1.0-SNAPSHOT</version>
 	<modules>
 		<module>todo-war</module>
+		<module>ms-base</module>
 	</modules>
 
 

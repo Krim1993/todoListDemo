@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ms-base" />
         <module name="todo-war" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ms-base" target="1.5" />
       <module name="todo-war" target="1.5" />
       <module name="todoListDemo" target="1.5" />
     </bytecodeTargetLevel>
