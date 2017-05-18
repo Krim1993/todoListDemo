@@ -15,10 +15,10 @@ public class TaskDaoImpl extends BaseDao implements TaskDao {
         saveEntity(task);
     }
 
+    @SuppressWarnings("unchecked")
     public List<Task> listAllTasks() {
         String hql = "from Task";
-        List<Task> tasks = (List<Task>) this.getHibernateTemplate().find(hql);
-        return tasks;
+        return (List<Task>) this.getHibernateTemplate().find(hql);
     }
 
     public void updateTask(Task task) {
