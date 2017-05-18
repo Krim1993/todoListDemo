@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/todo-war/todo-war.iml" filepath="$PROJECT_DIR$/todo-war/todo-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/todoListDemo.iml" filepath="$PROJECT_DIR$/todoListDemo.iml" />
     </modules>
   </component>
