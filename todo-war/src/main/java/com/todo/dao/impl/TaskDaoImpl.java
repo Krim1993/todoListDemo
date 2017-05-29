@@ -26,6 +26,16 @@ public class TaskDaoImpl extends BaseDao implements TaskDao {
     }
 
     public void deleteTask(Task task) {
-        deteleEntity(task);
+        deleteEntity(task);
+    }
+
+
+    public Task getTaskById(Task task) {
+        String hql = "from Task t where t.taskId = ?";
+        List<Task> tasks = (List<Task>) this.getHibernateTemplate().find(hql, task.getTaskId());
+        if (tasks.size() > 0) {
+            task = tasks.get(0);
+        }
+        return task;
     }
 }

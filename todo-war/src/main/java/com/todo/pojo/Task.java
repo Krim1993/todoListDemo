@@ -18,6 +18,8 @@ public class Task {
 
 	private String doneTime;//完成时间
 
+	private String taskDesc;//任务描述
+
 	public Task() {}
 
 
@@ -51,5 +53,13 @@ public class Task {
 
 	public void setDoneTime(String doneTime) {
 		this.doneTime = doneTime;
+	}
+
+	public String getTaskDesc() {
+		return taskDesc;
+	}
+
+	public void setTaskDesc(String taskDesc) {
+		this.taskDesc = taskDesc;
 	}
 }

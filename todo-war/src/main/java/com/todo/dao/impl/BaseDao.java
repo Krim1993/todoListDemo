@@ -37,7 +37,7 @@ public class BaseDao extends HibernateDaoSupport {
      * 删除实体
      * @param object
      */
-    public void deteleEntity(Object object) {
+    public void deleteEntity(Object object) {
         Session session = this.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         session.delete(object);

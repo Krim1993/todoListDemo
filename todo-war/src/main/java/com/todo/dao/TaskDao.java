@@ -32,4 +32,11 @@ public interface TaskDao {
 	 * @param task
 	 */
 	void deleteTask(Task task);
+
+	/**
+	 * 根据ID获取指定任务
+	 * @param task
+	 * @return
+	 */
+	Task getTaskById(Task task);
 }
