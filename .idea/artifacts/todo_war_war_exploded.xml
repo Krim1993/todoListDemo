@@ -7,6 +7,12 @@
           <element id="module-output" name="todo-war" />
         </element>
         <element id="directory" name="lib">
+          <element id="archive" name="todo-war-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="todo-war" />
+          </element>
+          <element id="archive" name="todo-war-1.0-SNAPSHOT.">
+            <element id="module-output" name="todo-war" />
+          </element>
           <element id="archive" name="ms-base-1.0-SNAPSHOT.jar">
             <element id="module-output" name="ms-base" />
           </element>

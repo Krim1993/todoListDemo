@@ -13,23 +13,25 @@
 		<module>ms-base</module>
 	</modules>
 
+
+
 	<build>
 		<finalName>todo-parent</finalName>
 		<plugins>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>3.0.0</version>
-				<configuration>
-					<overlays>
-						<overlay>
-							<groupId>com.krim</groupId>
-							<artifactId>todo-war</artifactId>
-						</overlay>
-					</overlays>
-				</configuration>
-			</plugin>
+			<!--<plugin>-->
+				<!--<groupId>org.apache.maven.plugins</groupId>-->
+				<!--<artifactId>maven-war-plugin</artifactId>-->
+				<!--<version>3.0.0</version>-->
+				<!--<configuration>-->
+					<!--<overlays>-->
+						<!--<overlay>-->
+							<!--<groupId>com.krim</groupId>-->
+							<!--<artifactId>todo-war</artifactId>-->
+						<!--</overlay>-->
+					<!--</overlays>-->
+				<!--</configuration>-->
+			<!--</plugin>-->
 
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>

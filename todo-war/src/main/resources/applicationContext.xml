@@ -45,6 +45,6 @@
 			</props>
 		</property>
 
-		<property name="packagesToScan" value=""/>
+		<property name="packagesToScan" value="com.todo.pojo"/>
 	</bean>
 </beans>

@@ -16,17 +16,16 @@
 	<context:component-scan base-package="com.todo.controller,com.todo.service,com.todo.dao.impl"/>
 
 	<!-- 开启mvc注解 -->
-	<mvc:annotation-driven />
+	<mvc:annotation-driven/>
 
 	<mvc:default-servlet-handler/>
+
+	<mvc:resources location="/resources/css/" mapping="/css/**"/>
+	<mvc:resources location="/resources/js/" mapping="/js/**"/>
 
 	<bean id="view" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/"/>
 		<property name="suffix" value=".jsp"/>
 	</bean>
-
-
-
-
 
 </beans>
