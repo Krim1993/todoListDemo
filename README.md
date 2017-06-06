@@ -1,7 +1,8 @@
 # todoListDemo
 这是一个todo小例子
 
-#开始使用
+# 开始使用
+
 1.首先在你的计算机上安装好git
 
 2.git clone将项目克隆到本地
