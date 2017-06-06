@@ -1,6 +1,6 @@
-<%@ page import="java.util.List" %>
-<%@ page import="com.todo.pojo.Task" %>
+
 <%@page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 
 <title>TODO LIST DEMO</title>
@@ -36,7 +36,18 @@
             </tr>
             </thead>
             <tbody>
-
+            <c:forEach items="${tasks}" var="task">
+                <tr>
+                    <td>${task.taskId}</td>
+                    <td>${task.taskName}</td>
+                    <td>${task.status}</td>
+                    <td>${task.doneTime}</td>
+                    <td>
+                        <button class="btn btn-primary btn-sm">完成任务</button>
+                        <button class="btn btn-primary btn-sm">删除任务</button>
+                    </td>
+                </tr>
+            </c:forEach>
             </tbody>
         </table>
 
