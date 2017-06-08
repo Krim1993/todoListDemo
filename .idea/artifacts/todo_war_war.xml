@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="todo-war:war">
-    <output-path>$PROJECT_DIR$/todo-war/target</output-path>
-    <root id="archive" name="todo-war.war">
-      <element id="artifact" artifact-name="todo-war:war exploded" />
-    </root>
-  </artifact>
-</component>
