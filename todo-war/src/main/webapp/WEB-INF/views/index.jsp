@@ -44,7 +44,7 @@
                     <td>${task.doneTime}</td>
                     <td>
                         <button class="btn btn-primary btn-sm" id="finishTask" onclick="finishTask('${task.taskId}')">完成任务</button>
-                        <button class="btn btn-primary btn-sm" id="deleteTask" onclick="deleteTask('${task.taskId}')">删除任务</button>
+                        <button class="btn btn-primary btn-sm" id="deleteTask" onclick="deleteTask('${task.taskId}', '${task.status}')">删除任务</button>
                     </td>
                 </tr>
             </c:forEach>

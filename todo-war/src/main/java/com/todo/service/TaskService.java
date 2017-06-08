@@ -42,6 +42,17 @@ public class TaskService {
 		taskDao.updateTask(task);
 	}
 
+	/**
+	 * 删除任务
+	 * @param taskId
+	 */
+	public void deleteTask(Integer taskId) {
+		Task task = new Task();
+		task.setTaskId(taskId);
+		task = getTaskById(task);
+		taskDao.deleteTask(task);
+	}
+
 	public List<Task> listAllTasks() {
 		return taskDao.listAllTasks();
 	}

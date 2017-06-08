@@ -39,4 +39,10 @@ public class TaskController {
 	public void finishTask(@RequestParam("taskId") Integer taskId) {
 		taskService.finishTask(taskId);
 	}
+
+	@RequestMapping(value = "/deleteTask", method = RequestMethod.POST)
+	@ResponseBody
+	public void deleteTask(@RequestParam("taskId") Integer taskId) {
+		taskService.deleteTask(taskId);
+	}
 }
