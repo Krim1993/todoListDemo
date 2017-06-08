@@ -20,7 +20,7 @@ public class BaseDao extends HibernateDaoSupport {
      * 新增实体对象
      * @param object
      */
-    public void saveEntity(Object object) {
+    void saveEntity(Object object) {
         Session session = this.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         session.save(object);
@@ -32,7 +32,7 @@ public class BaseDao extends HibernateDaoSupport {
      * 更新实体
      * @param object
      */
-    public void updateEntity(Object object) {
+    void updateEntity(Object object) {
         Session session = this.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         session.update(object);
@@ -44,7 +44,7 @@ public class BaseDao extends HibernateDaoSupport {
      * 删除实体
      * @param object
      */
-    public void deleteEntity(Object object) {
+    void deleteEntity(Object object) {
         Session session = this.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         session.delete(object);

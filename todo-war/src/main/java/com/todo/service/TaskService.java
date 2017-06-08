@@ -18,9 +18,12 @@ public class TaskService {
 
 	/**
 	 * 新建任务
-	 * @param task
+	 * @param taskName
 	 */
-	public void createNewTask(Task task) {
+	public void createNewTask(String taskName) {
+		Task task = new Task();
+		task.setTaskName(taskName);
+		task.setStatus("未完成");
 		taskDao.addNewTask(task);
 	}
 
