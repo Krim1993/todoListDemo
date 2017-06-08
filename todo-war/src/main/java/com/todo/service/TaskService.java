@@ -2,9 +2,11 @@ package com.todo.service;
 
 import com.todo.dao.TaskDao;
 import com.todo.pojo.Task;
+import com.todo.tools.GetTimeTool;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -25,6 +27,19 @@ public class TaskService {
 		task.setTaskName(taskName);
 		task.setStatus("未完成");
 		taskDao.addNewTask(task);
+	}
+
+	/**
+	 * 完成任务
+	 * @param taskId
+	 */
+	public void finishTask(Integer taskId) {
+		Task task = new Task();
+		task.setTaskId(taskId);
+		task = getTaskById(task);
+		task.setStatus("已完成");
+		task.setDoneTime(GetTimeTool.getToday(new Date()));
+		taskDao.updateTask(task);
 	}
 
 	public List<Task> listAllTasks() {

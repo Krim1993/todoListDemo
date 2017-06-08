@@ -19,3 +19,28 @@ $(function () {
 		});
 	});
 });
+
+/**
+ * 完成任务
+ * @param taskId
+ */
+function finishTask(taskId) {
+	$.ajax({
+		url:"/finishTask",
+		type:"post",
+		data:{
+			taskId:taskId
+		},
+		success:function () {
+			alert("任务已完成");
+			window.location.reload(true);
+		},
+		error:function () {
+			console.log("ERROR！");
+		}
+	});
+}
+
+function deleteTask(taskId) {
+
+}

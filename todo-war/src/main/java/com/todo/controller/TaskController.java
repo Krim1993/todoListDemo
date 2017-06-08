@@ -33,4 +33,10 @@ public class TaskController {
 	public void createTask(@RequestParam("taskName") String taskName) {
 		taskService.createNewTask(taskName);
 	}
+
+	@RequestMapping(value = "/finishTask", method = RequestMethod.POST)
+	@ResponseBody
+	public void finishTask(@RequestParam("taskId") Integer taskId) {
+		taskService.finishTask(taskId);
+	}
 }
