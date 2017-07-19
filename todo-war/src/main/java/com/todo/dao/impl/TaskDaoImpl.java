@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
+ * 数据库接口实现类
  * Created by Administrator on 2017/5/18.
  */
 @Repository
