@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
+ * 任务实体类Task
  * Created by njw20 on 2017/5/18.
  */
 @Entity

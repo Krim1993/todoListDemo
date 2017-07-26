@@ -5,6 +5,7 @@ import com.todo.pojo.Task;
 import java.util.List;
 
 /**
+ * 任务Dao
  * Created by njw20 on 2017/5/18.
  */
 public interface TaskDao {

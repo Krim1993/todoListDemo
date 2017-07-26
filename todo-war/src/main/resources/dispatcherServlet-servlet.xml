@@ -22,6 +22,7 @@
 
 	<mvc:resources location="/resources/css/" mapping="/css/**"/>
 	<mvc:resources location="/resources/js/" mapping="/js/**"/>
+	<mvc:resources location="/resources/commons/" mapping="/commons/**"/>
 
 	<bean id="view" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/"/>

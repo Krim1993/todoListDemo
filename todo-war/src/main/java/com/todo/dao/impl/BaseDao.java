@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 
 /**
+ * Dao基类
  * Created by Administrator on 2017/5/18.
  */
 public class BaseDao extends HibernateDaoSupport {
@@ -18,7 +19,7 @@ public class BaseDao extends HibernateDaoSupport {
 
     /**
      * 新增实体对象
-     * @param object
+     * @param object 实体对象
      */
     void saveEntity(Object object) {
         Session session = this.getSessionFactory().openSession();
@@ -30,7 +31,7 @@ public class BaseDao extends HibernateDaoSupport {
 
     /**
      * 更新实体
-     * @param object
+     * @param object 实体对象
      */
     void updateEntity(Object object) {
         Session session = this.getSessionFactory().openSession();
@@ -42,7 +43,7 @@ public class BaseDao extends HibernateDaoSupport {
 
     /**
      * 删除实体
-     * @param object
+     * @param object 实体对象
      */
     void deleteEntity(Object object) {
         Session session = this.getSessionFactory().openSession();

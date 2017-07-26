@@ -4,15 +4,18 @@ import com.todo.dao.TaskDao;
 import com.todo.pojo.Task;
 import com.todo.tools.GetTimeTool;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
 
 /**
+ * 任务Service
  * Created by njw20 on 2017/5/29.
  */
 @Service
+@Transactional
 public class TaskService {
 
 	@Resource
@@ -20,7 +23,7 @@ public class TaskService {
 
 	/**
 	 * 新建任务
-	 * @param taskName
+	 * @param taskName 任务名称
 	 */
 	public void createNewTask(String taskName) {
 		Task task = new Task();
@@ -31,7 +34,7 @@ public class TaskService {
 
 	/**
 	 * 完成任务
-	 * @param taskId
+	 * @param taskId 任务ID
 	 */
 	public void finishTask(Integer taskId) {
 		Task task = new Task();
@@ -44,7 +47,7 @@ public class TaskService {
 
 	/**
 	 * 删除任务
-	 * @param taskId
+	 * @param taskId 任务ID
 	 */
 	public void deleteTask(Integer taskId) {
 		Task task = new Task();

@@ -47,4 +47,7 @@
 
 		<property name="packagesToScan" value="com.todo.pojo"/>
 	</bean>
+
+	<!--自动对标注@Autowire的bean自动注入-->
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
 </beans>

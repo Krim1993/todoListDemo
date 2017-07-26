@@ -7,6 +7,7 @@
 <link href="/css/bootstrap.css" rel="stylesheet">
 
 <body style="">
+<%@include file="/resources/commons/header.jsp"%>
 <div class="ibox float-e-margins">
     <div class="ibox-title text-center">
         <h2>TODO LIST</h2>
