@@ -18,6 +18,31 @@
     <div class="ibox-title text-center">
         <h2>学生列表</h2>
     </div>
+
+    <div class="container">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>学生姓名</th>
+                <th>所属小组</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <c:forEach items="${students}" var="student" varStatus="status">
+                <tr>
+                    <td>${status.index + 1}</td>
+                    <td>${student.studentName}</td>
+                    <td>${student.group.groupName}</td>
+                    <td>
+                        <a href="#" class="btn btn-primary btn-sm">编辑</a>
+                    </td>
+                </tr>
+            </c:forEach>
+            </tbody>
+        </table>
+    </div>
 </div>
 </body>
 </html>

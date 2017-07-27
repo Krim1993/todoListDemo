@@ -35,5 +35,4 @@ public class GroupController {
 		return "redirect:/group/all";
 	}
 
-
 }
