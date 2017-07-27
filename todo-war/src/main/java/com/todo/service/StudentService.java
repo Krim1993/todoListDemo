@@ -59,4 +59,8 @@ public class StudentService {
 		student.setGroup(group);
 		studentDao.updateStudent(student);
 	}
+
+	public void deleteStudentById(Integer studentId) {
+		studentDao.deleteStudentById(studentId);
+	}
 }

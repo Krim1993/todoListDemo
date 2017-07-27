@@ -6,10 +6,7 @@ import com.todo.service.GroupService;
 import com.todo.service.StudentService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -62,5 +59,11 @@ public class StudentController {
 	                            @RequestParam("groupId") Integer groupId) {
 		studentService.updateStudent(studentId, studentName, groupId);
 		return "redirect:/student/all";
+	}
+
+	@RequestMapping("/delete")
+	@ResponseBody
+	public void deleteStudent(@RequestParam("studentId") Integer studentId) {
+		studentService.deleteStudentById(studentId);
 	}
 }

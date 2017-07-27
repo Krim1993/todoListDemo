@@ -37,6 +37,7 @@
                     <td>${student.group.groupName}</td>
                     <td>
                         <a href="/student/${student.studentId}" class="btn btn-primary btn-sm">编辑</a>
+                        <button class="btn btn-primary btn-sm" onclick="deleteStudent('${student.studentId}')">删除</button>
                     </td>
                 </tr>
             </c:forEach>
@@ -45,4 +46,19 @@
     </div>
 </div>
 </body>
+
+<script src="/js/jquery-2.1.1.js"></script>
+<script type="text/javascript">
+	/**
+     * 删除学生操作
+	 * @param studentId
+	 */
+	function deleteStudent(studentId) {
+
+		$.post("/student/delete", {studentId: studentId}, function () {
+            alert("删除成功!");
+            location.reload(true);
+		});
+    }
+</script>
 </html>
