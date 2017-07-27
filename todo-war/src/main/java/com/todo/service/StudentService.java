@@ -37,4 +37,12 @@ public class StudentService {
 			System.out.println("该部门不存在!");
 		}
 	}
+
+	public Student getStudentById(Integer studentId) {
+		return studentDao.getStudentById(studentId);
+	}
+
+	public void updateStudent(Integer studentId, String studentName, Integer groupId) {
+
+	}
 }

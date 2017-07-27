@@ -6,6 +6,7 @@ import com.todo.service.GroupService;
 import com.todo.service.StudentService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -44,6 +45,22 @@ public class StudentController {
 	@RequestMapping(value = "/saveAdd", method = RequestMethod.POST)
 	public String saveAdd(@RequestParam("studentName") String studentName, @RequestParam("groupId") Integer groupId) {
 		studentService.addStudent(studentName, groupId);
+		return "redirect:/student/all";
+	}
+
+	@RequestMapping("/{studentId}")
+	public String studentDetail(@PathVariable("studentId") Integer studentId, Model model) {
+		Student student = studentService.getStudentById(studentId);
+		List<StuGroup> groups = groupService.listAllGroups();
+		model.addAttribute("student", student);
+		model.addAttribute("groups", groups);
+		return "studentDetail";
+	}
+
+	@RequestMapping("/update")
+	public String updateStudent(@RequestParam("studentId") Integer studentId, @RequestParam("studentName") String studentName,
+	                            @RequestParam("groupId") Integer groupId) {
+		studentService.updateStudent(studentId, studentName, groupId);
 		return "redirect:/student/all";
 	}
 }

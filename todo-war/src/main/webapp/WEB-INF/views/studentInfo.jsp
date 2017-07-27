@@ -36,7 +36,7 @@
                     <td>${student.studentName}</td>
                     <td>${student.group.groupName}</td>
                     <td>
-                        <a href="#" class="btn btn-primary btn-sm">编辑</a>
+                        <a href="/student/${student.studentId}" class="btn btn-primary btn-sm">编辑</a>
                     </td>
                 </tr>
             </c:forEach>
