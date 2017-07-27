@@ -42,4 +42,13 @@ public class Student {
 	public void setGroup(StuGroup group) {
 		this.group = group;
 	}
+
+	@Override
+	public String toString() {
+		return "Student{" +
+				"studentId=" + studentId +
+				", studentName='" + studentName + '\'' +
+				", group=" + group +
+				'}';
+	}
 }

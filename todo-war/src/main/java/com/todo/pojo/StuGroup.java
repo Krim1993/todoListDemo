@@ -43,4 +43,13 @@ public class StuGroup {
 	public void setStudents(Set<Student> students) {
 		this.students = students;
 	}
+
+	@Override
+	public String toString() {
+		return "StuGroup{" +
+				"groupId=" + groupId +
+				", groupName='" + groupName + '\'' +
+				", students=" + students +
+				'}';
+	}
 }

@@ -43,6 +43,20 @@ public class StudentService {
 	}
 
 	public void updateStudent(Integer studentId, String studentName, Integer groupId) {
+		Student student = studentDao.getStudentById(studentId);
+		if (student == null) {
+			System.out.println("学生不存在");
+			return;
+		}
 
+		StuGroup group = groupDao.getGroupById(groupId);
+		if (group == null) {
+			System.out.println("部门不存在");
+			return;
+		}
+
+		student.setStudentName(studentName);
+		student.setGroup(group);
+		studentDao.updateStudent(student);
 	}
 }

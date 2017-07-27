@@ -57,4 +57,13 @@ public class Task {
 		this.doneTime = doneTime;
 	}
 
+	@Override
+	public String toString() {
+		return "Task{" +
+				"taskId=" + taskId +
+				", taskName='" + taskName + '\'' +
+				", status='" + status + '\'' +
+				", doneTime='" + doneTime + '\'' +
+				'}';
+	}
 }
