@@ -16,7 +16,7 @@ public class StuGroup {
 
 	private String groupName;
 
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "groupId")
 	private Set<Student> students;
 

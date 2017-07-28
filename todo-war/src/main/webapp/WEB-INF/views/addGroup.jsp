@@ -45,7 +45,7 @@
                 <tr>
                     <td>${status.index + 1}</td>
                     <td>${group.groupName}</td>
-                    <td><a href="#" class="btn btn-primary btn-sm">编辑</a></td>
+                    <td><a href="/group/${group.groupId}" class="btn btn-primary btn-sm">编辑</a></td>
                 </tr>
             </c:forEach>
             </tbody>

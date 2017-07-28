@@ -26,4 +26,19 @@ public class GroupService {
 	public List<StuGroup> listAllGroups() {
 		return groupDao.listAllGroups();
 	}
+
+	public StuGroup getGroupById(Integer groupId) {
+		return groupDao.getGroupById(groupId);
+	}
+
+	public void updateGroupInfo(String groupName, Integer groupId) {
+		StuGroup group = groupDao.getGroupById(groupId);
+		if (group == null) {
+			System.out.println("该记录已被删除");
+			return;
+		}
+
+		group.setGroupName(groupName);
+		groupDao.updateGroup(group);
+	}
 }
