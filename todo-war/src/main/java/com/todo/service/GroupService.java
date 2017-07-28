@@ -1,7 +1,9 @@
 package com.todo.service;
 
 import com.todo.dao.StuGroupDao;
+import com.todo.dao.StudentDao;
 import com.todo.pojo.StuGroup;
+import com.todo.pojo.Student;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -16,6 +18,9 @@ public class GroupService {
 
 	@Resource
 	private StuGroupDao groupDao;
+
+	@Resource
+	private StudentDao studentDao;
 
 	public void addGroup(String groupName) {
 		StuGroup group = new StuGroup();
@@ -40,5 +45,9 @@ public class GroupService {
 
 		group.setGroupName(groupName);
 		groupDao.updateGroup(group);
+	}
+
+	public List<Student> listStudentsByGroupId(Integer groupId) {
+		return studentDao.listStudentsByGroup(groupId);
 	}
 }

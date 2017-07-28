@@ -1,6 +1,7 @@
 package com.todo.controller;
 
 import com.todo.pojo.StuGroup;
+import com.todo.pojo.Student;
 import com.todo.service.GroupService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -39,9 +40,12 @@ public class GroupController {
 	@RequestMapping("/{groupId}")
 	public String groupDetail(@PathVariable("groupId") Integer groupId, Model model) {
 		StuGroup group = groupService.getGroupById(groupId);
+
+		List<Student> students = groupService.listStudentsByGroupId(groupId);
 		if (group == null) {
 			model.addAttribute("groupError", "该部门已被删除");
 		} else {
+			model.addAttribute("students", students);
 			model.addAttribute("group", group);
 		}
 		return "groupDetail";

@@ -46,7 +46,13 @@
             </tr>
             </thead>
             <tbody>
-
+            <c:forEach items="${students}" var="student" varStatus="status">
+                <tr>
+                    <td>${status.index + 1}</td>
+                    <td>${student.studentName}</td>
+                    <td>${student.group.groupName}</td>
+                </tr>
+            </c:forEach>
             </tbody>
         </table>
     </div>
